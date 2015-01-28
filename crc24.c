@@ -33,7 +33,7 @@ crc24(char *s)
 			if (crc & 0x1000000)
 				crc ^= CRC24_POLY;
 		}
-	} while (*s++);
+	} while (*++s);
 
 	return crc;
 }
