@@ -18,10 +18,10 @@
 #include <stdio.h>
 #include "color.h"
 
-struct color
+Color
 newcolor(long n)
 {
-	struct color c;
+	Color c;
 
 	c.r = n >> 0x10;
 	c.g = n >> 0x08;
@@ -30,8 +30,8 @@ newcolor(long n)
 	return c;
 }
 
-struct color
-shade(struct color c)
+Color
+shade(Color c)
 {
 	c.r >>= 2;
 	c.g >>= 2;
@@ -40,8 +40,8 @@ shade(struct color c)
 	return c;
 }
 
-struct color
-tint(struct color c)
+Color
+tint(Color c)
 {
 	c.r += (0xFF - c.r) >> 1;
 	c.g += (0xFF - c.g) >> 1;
@@ -51,7 +51,7 @@ tint(struct color c)
 }
 
 char *
-string(struct color c)
+string(Color c)
 {
 	char *ret;
 

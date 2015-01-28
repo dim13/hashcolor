@@ -20,13 +20,13 @@
 
 #include <sys/cdefs.h>
 
+typedef struct color Color;
+
 struct color {
 	unsigned char r;
 	unsigned char g;
 	unsigned char b;
 };
-
-typedef struct color Color;
 
 __BEGIN_DECLS
 Color newcolor(long);
