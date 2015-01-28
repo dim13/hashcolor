@@ -36,8 +36,7 @@ main(int argc, char **argv)
 
 	c = newcolor(crc24(arg));
 
-	printf("-fg %s ", string(tint(c)));
-	printf("-bg %s\n", string(shade(c)));
+	printf("-fg %s -bg %s\n", string(tint(c)), string(shade(c)));
 
 	return 0;
 }
