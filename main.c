@@ -28,8 +28,8 @@
 int
 main(int argc, char **argv)
 {
-	Color c;
 	char arg[256] = {};
+	Color c;
 
 	while (*++argv)
 		strlcat(arg, *argv, sizeof(arg));
