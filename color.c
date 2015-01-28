@@ -53,9 +53,9 @@ tint(Color c)
 char *
 string(Color c)
 {
-	char *ret;
+	char *s;
 
-	asprintf(&ret, "#%.2x%.2x%.2x", c.r, c.g, c.b);
+	asprintf(&s, "#%.2x%.2x%.2x", c.r, c.g, c.b);
 
-	return ret;
+	return s;
 }
