@@ -29,14 +29,14 @@ int
 main(int argc, char **argv)
 {
 	char arg[256] = {};
-	Color c;
+	struct color c;
 
 	while (*++argv)
 		strlcat(arg, *argv, sizeof(arg));
 
 	c = newcolor(crc24(arg));
 
-	printf("-fg %s -bg %s\n", string(tint(c)), string(shade(c)));
+	printf("-fg #%.6x -bg #%.6x\n", tint(c), shade(c));
 
 	return 0;
 }

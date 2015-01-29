@@ -20,8 +20,6 @@
 
 #include <sys/cdefs.h>
 
-typedef struct color Color;
-
 struct color {
 	unsigned char r;
 	unsigned char g;
@@ -29,10 +27,9 @@ struct color {
 };
 
 __BEGIN_DECLS
-Color newcolor(long);
-Color shade(Color);
-Color tint(Color);
-char *string(Color);
+struct color newcolor(long);
+long shade(struct color);
+long tint(struct color);
 __END_DECLS
 
 #endif
