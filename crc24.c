@@ -23,17 +23,17 @@
 long
 crc24(char *s)
 {
-	long crc = CRC24_INIT;
+	long crc;
 	int i;
 
-	do {
+	for (crc = CRC24_INIT; *s; s++) {
 		crc ^= *s << 0x10;
 		for (i = 0; i < 8; i++) {
 			crc <<= 1;
 			if (crc & 0x1000000)
 				crc ^= CRC24_POLY;
 		}
-	} while (*++s);
+	}
 
 	return crc;
 }
