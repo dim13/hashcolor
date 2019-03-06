@@ -83,7 +83,7 @@ main(int argc, char **argv)
 
 	color = crc24(arg);
 
-	printf("-fg #%.6x -bg #%.6x\n", tint(color), shade(color));
+	printf("-fg #%.6lx -bg #%.6lx\n", tint(color), shade(color));
 
 	return 0;
 }
