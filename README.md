@@ -1,6 +1,7 @@
 # hashcolor
+
 Simple color randomizer for uxterm
 
-Build and install with `pmake' on linux
+## install
 
-Patch uxterm with `pmake patch'
+	go get -u github.com/dim13/hashcolor/cmd/hashcolor
