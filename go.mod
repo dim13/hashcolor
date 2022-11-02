@@ -1,5 +1,5 @@
 module github.com/dim13/hashcolor
 
-go 1.12
+go 1.19
 
-require github.com/dim13/crc24 v0.0.0-20190308110643-af7201913116
+require github.com/dim13/crc24 v0.0.0-20220926101255-82b151ee35aa
